@@ -1,0 +1,209 @@
+body
+{
+    background-color: rgba(0, 0, 0, 0.726);
+    color: seashell;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.App
+{margin: 1rem 1rem 1rem 1rem ;
+
+
+}
+.nav
+{   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.pre
+{
+    display: flex;
+    justify-content: center;
+}
+.main
+{
+    display: flex;
+    flex-direction: column;
+    width: clamp(300px,60%,500px);
+}
+.list
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:2rem
+}
+.input-group
+{
+    text-align: center;
+   
+}
+.input-form
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn
+{
+   background-color: rgb(12, 34, 112);
+   border: none;
+   color: white;
+   text-align: center;
+   border-radius: 0.2rem;
+   margin-left:0.2rem;
+   margin-right: 0.2rem;
+    padding: 0.3 rem;
+   font-size: 1.02rem;
+}
+.btn-add:hover
+{
+    background-color: rgb(44, 190, 25);
+}
+.btn-add
+{
+    background-color: rgb(23, 110, 11);
+}
+.btn-clear
+{
+    background-color: rgb(145, 18, 13);
+}
+.btn-clear:hover
+{
+    background-color: rgb(207, 28, 22);
+}
+.input-text
+{
+     border-color: rgb(41, 93, 100);
+    border-style: solid;
+    /* border-width: 0.12rem; */
+    border-radius: 0.12rem;
+    background-color: rgba(0, 0, 0, 0.726);
+ 
+    color: white;
+}
+.input-text:focus
+{
+    border-style: solid;
+    border-radius: 0.12rem;
+    /* border-width: 0.22rem; */
+    border-color: transparent;
+    
+}
+.todo-box
+{
+    min-width:80%;
+    background-color: rgba(0, 0, 0, 0.726);
+    height: clamp(auto,4rem,100%);
+    margin-bottom: 1.2rem;
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.3rem;
+   
+    opacity: 0;
+    animation:grow 0.3s ease-in-out forwards;
+}
+.todo-box-shrink-remove
+{   opacity: 1;
+    
+   animation:shrink 0.5s ease-in-out forwards;
+}
+.todo-box-shrink-done
+{
+    opacity: 1;
+    animation:done 0.5s ease-in-out forwards;
+}
+@keyframes grow
+{
+    to{
+        max-height: auto;
+        opacity: 1;
+    }
+}
+@keyframes shrink
+{  from
+    {
+        background-color: rgba(80, 29, 29, 0.562);
+    }
+    to
+    { background-color: rgba(255, 0, 0, 0.562);
+        opacity: 0;
+        
+    }
+}
+@keyframes done
+{from
+    {
+        background-color: rgba(34, 90, 46, 0.466);
+    }
+    to
+    { background-color: rgba(0, 255, 55, 0.466);
+        opacity: 0;
+       
+    }
+}
+.todo-box-top
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    min-height: 2.2rem;
+}
+.comment
+{
+    padding: 0.2rem;
+    margin: 0;
+    font-size: 1.2rem;
+    background-color:rgba(59, 48, 48, 0.726); ;
+}
+.comment-time
+{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.edit-comment
+{
+    display: flex;
+    flex-direction: column;
+}
+.todo-btn
+{   color: white;
+   background-color: rgb(97, 95, 95);
+    border-radius: 0.2rem;
+    margin-right: 1rem;
+    border:none
+}
+.todo-btn-remove
+{
+    background-color: rgba(138, 16, 16, 0.466);
+}
+.todo-btn-done
+{
+    background-color: rgba(10, 129, 40, 0.466);
+}
+.todo-btn-remove:hover
+{
+    background-color: rgb(207, 28, 22);    
+}
+.todo-btn-done:hover
+{
+    background-color: rgb(44, 190, 25);
+}
+@media(max-width:400px)
+{
+    .main
+    {
+        width: 100vw;
+    }
+    .list
+    {
+        width: 100vw;
+        
+    }
+}
